@@ -1,12 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+  Image, 
+  StatusBar, 
+  StyleSheet, 
+  Text, 
+  SafeAreaView, 
+  Dimensions 
+} from 'react-native';
+import topo from './assets/topo.png';
+
+const width_base = Dimensions.get('screen').width;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Image style={styles.topo} source={topo} />
+      <Text>ProjectX</Text>
+      <Text>Carlos Filipe</Text>
+      <StatusBar />
+    </SafeAreaView>     
+  
   );
 }
 
@@ -14,7 +26,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  topo: {
+    width: '100%',
+    height: 582/772 * width_base,
+  }
 });
