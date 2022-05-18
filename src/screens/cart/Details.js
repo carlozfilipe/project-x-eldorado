@@ -1,21 +1,22 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
-import sellerLogo from '../../assets/logo.png';
+import { View, Image, StyleSheet } from 'react-native';
+import sellerLogo from '../../../assets/logo.png';
+import CustomText from '../../components/CustomText';
 
 export default function Details() {
   return (
     <>
-      <Text style={styles.details}>Detalhes do Carrinho</Text>
-      <Text style={styles.title}>Kit IoT</Text>
+      <CustomText style={styles.details}>Detalhes do Carrinho</CustomText>
+      <CustomText style={styles.title}>Kit IoT</CustomText>
       <View style={styles.salesman}>
         <Image source={sellerLogo} style={styles.sellerLogo} />
-        <Text style={styles.sellerName}>Nuvem's Shopping</Text>
+        <CustomText style={styles.sellerName}>Nuvem's Shopping</CustomText>
       </View>
 
-      <Text style={styles.description}>
+      <CustomText style={styles.description}>
         Um kit IoT que revoluciona a vida dos estudantes
-      </Text>
-      <Text style={styles.price}>R$ 99,00</Text>
+      </CustomText>
+      <CustomText style={styles.price}>R$ 99,00</CustomText>
     </>
   );
 }
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
   title: {
     color: '#ffa500',
     fontWeight: 'bold',
+    fontSize: 25,
     lineHeight: 35,
     textAlign: 'center',
   },
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
 
   description: {
     color: '#a1a1a1',
-    fontSize: 20,
+    fontSize: 16,
     marginLeft: 20,
   },
 

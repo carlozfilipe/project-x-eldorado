@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, Text, StyleSheet, Dimensions } from 'react-native';
-import topImage from '../../assets/topImage.png';
+import { Image, StyleSheet, Dimensions } from 'react-native';
+import topImage from '../../../assets/topImage.png';
+import CustomText from '../../components/CustomText';
 
 const width_base = Dimensions.get('screen').width;
 
@@ -8,7 +9,7 @@ export default function TopImage() {
   return (
     <>
       <Image source={topImage} style={styles.topImage} />
-      <Text style={styles.titleCar}>Carrinho</Text>
+      <CustomText style={styles.titleCar}>Carrinho</CustomText>
     </>
   );
 }
