@@ -1,22 +1,19 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
-import sellerLogo from '../../../assets/logo.png';
 import CustomText from '../../components/CustomText';
 
-export default function Details() {
+export default function Details({title, titleProduct, description, sellerLogo, sellerName, price}) {
   return (
     <>
-      <CustomText style={styles.details}>Detalhes do Carrinho</CustomText>
-      <CustomText style={styles.title}>Kit IoT</CustomText>
+      <CustomText style={styles.details}> {title} </CustomText>
+      <CustomText style={styles.title}> {titleProduct} </CustomText>
       <View style={styles.salesman}>
         <Image source={sellerLogo} style={styles.sellerLogo} />
-        <CustomText style={styles.sellerName}>Nuvem's Shopping</CustomText>
+        <CustomText style={styles.sellerName}> {sellerName} </CustomText>
       </View>
 
-      <CustomText style={styles.description}>
-        Um kit IoT que revoluciona a vida dos estudantes
-      </CustomText>
-      <CustomText style={styles.price}>R$ 99,00</CustomText>
+      <CustomText style={styles.description}> {description} </CustomText>
+      <CustomText style={styles.price}> {price} </CustomText>
     </>
   );
 }
